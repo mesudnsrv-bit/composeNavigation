@@ -21,7 +21,6 @@ fun NavGraph() {
         navController = navController,
         startDestination = "home_screen"
     ) {
-        // 1. Home Ekranı
         composable("home_screen") {
             HomeScreen(
                 onProfileClick = {
@@ -36,7 +35,6 @@ fun NavGraph() {
             )
         }
 
-        // 2. Main Screen (Dine In / Hava proqnozu)
         composable("main_screen") {
             MainScreen(
                 onCloseClick = {
@@ -50,7 +48,6 @@ fun NavGraph() {
                 }
             )
         }
-        // 3. Profil Ekranı
         composable("profile_screen") {
             ProfileScreen(
                 cashbackBalance = sharedViewModel.cashbackBalance,
@@ -59,7 +56,6 @@ fun NavGraph() {
             )
         }
 
-        // 4. Delivery / Kafelər Siyahısı Ekranı
         composable("delivery_screen") {
             DeliveryScreen(
                 onCafeClick = { cafeName ->
@@ -70,7 +66,6 @@ fun NavGraph() {
             )
         }
 
-        // 5. Kafe Detal / Kofe Qiymətləri və Sifariş Ekranı
         composable("cafe_detail/{cafeName}") { backStackEntry ->
             val cafeName = backStackEntry.arguments?.getString("cafeName") ?: "Kafe"
             CafeDetailScreen(

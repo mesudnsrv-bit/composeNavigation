@@ -43,7 +43,6 @@ class MainActivity : ComponentActivity() {
                             )
                         }
 
-                        // MainScreen düymələri artıq Delivery/Kafelər siyahısına keçir
                         composable("main_screen") {
                             MainScreen(
                                 onCloseClick = {

@@ -19,7 +19,6 @@ class MainViewModel : ViewModel() {
     var weatherDescription by mutableStateOf("Məlumat yüklənir...")
         private set
 
-    // Cari seçilmiş şəhər (Default: Bakı)
     var selectedCity by mutableStateOf("Bakı")
         private set
 
@@ -35,12 +34,10 @@ class MainViewModel : ViewModel() {
         fetchWeather(lat = 40.4093, lon = 49.8671, cityName = "Bakı")
     }
 
-    // Şəhərə görə hava məlumatını çəkən funksiya
     fun fetchWeather(lat: Double, lon: Double, cityName:String) {
         selectedCity = cityName
         viewModelScope.launch {
             try {
-                // Open-Meteo API-yə koordinatları ötürürük
                 val response = api.getCurrentWeather(lat = lat, lon = lon)
                 val temp = response.current_weather.temperature
                 temperature = "$temp°C"

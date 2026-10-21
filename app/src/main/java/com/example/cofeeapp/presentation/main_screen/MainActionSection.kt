@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
@@ -22,7 +21,6 @@ fun MainActionSection(
     Column(
         modifier = Modifier.fillMaxWidth()
     ) {
-        // Online Sifariş / Kafelər Düyməsi
         Button(
             onClick = onOnlineClick,
             modifier = Modifier
@@ -38,7 +36,6 @@ fun MainActionSection(
 
         Spacer(modifier = Modifier.height(12.dp))
 
-        // Məkanlar / Kafelər Düyməsi
         OutlinedButton(
             onClick = onLocationClick,
             modifier = Modifier

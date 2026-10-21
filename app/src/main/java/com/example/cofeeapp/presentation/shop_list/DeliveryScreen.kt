@@ -2,7 +2,6 @@ package com.example.cofeeapp.presentation.delivery
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -45,7 +44,6 @@ fun DeliveryScreen(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                // Geri düyməsi
                 IconButton(onClick = onBackClick) {
                     Icon(
                         painter = painterResource(id = R.drawable.ic_back),
@@ -53,7 +51,6 @@ fun DeliveryScreen(
                     )
                 }
 
-                // Home-a qayıt düyməsi
                 IconButton(onClick = onHomeClick) {
                     Icon(
                         painter = painterResource(id = R.drawable.ic_close),

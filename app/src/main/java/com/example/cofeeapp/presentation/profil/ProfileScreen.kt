@@ -61,7 +61,6 @@ fun ProfileScreen(
                     Spacer(modifier = Modifier.height(20.dp))
 
                     Text(text = "Cari Cashback:", style = MaterialTheme.typography.bodyMedium)
-                    // Formatlaşdırılmış dinamik balans:
                     Text(
                         text = String.format("%.2f AZN", cashbackBalance),
                         style = MaterialTheme.typography.headlineSmall,
